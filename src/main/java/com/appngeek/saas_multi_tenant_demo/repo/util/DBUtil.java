@@ -9,10 +9,8 @@ public class DBUtil {
 			String cleanURI = url.substring(5);
 
 			URI uri = URI.create(cleanURI);
-			String newUrl = "jdbc:" + uri.getScheme() + "://" + uri.getHost() + ":" + uri.getPort() + "/" + newDbName
+			return "jdbc:" + uri.getScheme() + "://" + uri.getHost() + ":" + uri.getPort() + "/" + newDbName
 					+ "?createDatabaseIfNotExist=true&verifyServerCertificate=false&useSSL=false&requireSSL=false&useUnicode=yes&characterEncoding=UTF-8";
-
-			return newUrl;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

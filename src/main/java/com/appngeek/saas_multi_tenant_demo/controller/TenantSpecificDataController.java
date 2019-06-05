@@ -41,6 +41,13 @@ public class TenantSpecificDataController {
 		return tenantSpecificDataRepository.findByUsername(username);
 	}
 
+	/**
+	 * Push data to specific tenant db based on tenantId passed as path variable
+	 * @param tenantId
+	 * @param username
+	 * @param tenantSpecificString
+	 * @return
+	 */
 	@PostMapping("/create/{tenantId}/{username}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public TenantSpecificData createTenantSpecificData(@PathVariable Long tenantId, @PathVariable String username,

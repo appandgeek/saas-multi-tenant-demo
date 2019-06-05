@@ -1,4 +1,4 @@
-package com.appngeek.saasmultitenantdemo;
+package com.appngeek.saas_multi_tenant_demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
